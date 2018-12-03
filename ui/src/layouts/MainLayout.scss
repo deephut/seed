@@ -1,0 +1,39 @@
+@import 'colors';
+
+.main-layout {
+	text-align: center;
+
+}
+
+.logo {
+	animation: logoSpin infinite 20s linear;
+	height: $logo-height;
+
+}
+
+.header {
+	background-color: #222;
+	height: 150px;
+	color: white;
+
+}
+
+.intro {
+	font-size: large;
+
+}
+
+.thing {
+	font-size: 200px;
+}
+
+@keyframes logoSpin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+
+}

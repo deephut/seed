@@ -1,0 +1,6 @@
+{
+	"ignore": ["**/*.test.ts", ".git", "node_modules", "build"],
+	"watch": ["src", "../service-entities"],
+	"exec": "ts-node -r tsconfig-paths/register --inspect=9229 src/server.ts",
+	"ext": "ts"
+}

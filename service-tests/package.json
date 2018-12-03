@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "test": "DEBUG=super-debug,super-curl jest --config=jest.config.json"
+  },
+  "devDependencies": {
+    "@types/jest": "20.0.7",
+    "@types/supertest": "2.0.3",
+    "jest": "20.0.4",
+    "superagent-debugger": "1.2.9",
+    "superagent-use": "0.1.0",
+    "supertest": "3.0.0",
+    "ts-jest": "20.0.10"
+  }
+}

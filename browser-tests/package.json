@@ -1,0 +1,15 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "test": "node ./node_modules/typescript/lib/tsc.js && node ./node_modules/webdriverio/bin/wdio"
+  },
+  "devDependencies": {
+    "@types/jest": "20.0.7",
+    "@types/webdriverio": "4.8.4",
+    "jest": "20.0.4",
+    "typescript": "2.4.2",
+    "wdio-jasmine-framework": "0.3.2",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "4.8.0"
+  }
+}

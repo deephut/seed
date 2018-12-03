@@ -1,0 +1,17 @@
+exports[`MainLayout renders correctly 1`] = `
+<div
+  className="mainLayout">
+  <div
+    className="header">
+    <img
+      alt="logo"
+      className="logo"
+      src="logo.svg" />
+    <h2>
+      Welcome to Todos
+    </h2>
+  </div>
+  <div
+    id="content" />
+</div>
+`;

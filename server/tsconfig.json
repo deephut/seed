@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"outDir": "build/src",
+		"target": "es5",
+		"module": "commonjs",
+		"sourceMap": true,
+		"allowJs": true,
+		"moduleResolution": "node",
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"experimentalDecorators": true,
+		"noUnusedLocals": true,
+		"baseUrl": "src"
+	},
+	"typeRoots": [
+		"../typeDefinitions"
+	],
+	"include": [
+		"../service-entities/**/*",
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

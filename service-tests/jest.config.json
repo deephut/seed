@@ -1,0 +1,16 @@
+{
+	"moduleFileExtensions": [
+		"js",
+		"ts"
+	],
+	"transform": {
+		"^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+	},
+	"testMatch": [
+		"**/tests/**/*.test.ts"
+	],
+	"modulePaths": ["<rootDir>/src"],
+	"testEnvironment": "node",
+	"coverageDirectory": "./build/jest",
+	"cacheDirectory": "./build/jest"
+}

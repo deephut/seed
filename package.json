@@ -1,0 +1,38 @@
+{
+	"license": "MIT",
+	"scripts": {
+		"install:ui": "cd ui && yarn install",
+		"install:server": "cd server && yarn install",
+		"install:serviceTests": "cd service-tests && yarn install",
+		"install:browserTests": "cd browser-tests && yarn install",
+		"start:ui": "yarn install:ui && cd ui && yarn start",
+		"start:serverDev": "yarn install:server && cd server && yarn startDev",
+		"start:server": "yarn install:server && cd server && yarn start",
+		"start:serviceTests": "yarn install:serviceTests && cd service-tests && yarn test",
+		"start:browserTests": "yarn install:browserTests && cd browser-tests && yarn test",
+		"test:server": "yarn install:server && cd server && yarn test",
+		"test:ui": "yarn install:server && cd ui && yarn test",
+		"test:service": "DATABASE_NAME=seed node ./buildSrc/runServiceTests.js",
+		"test:browser": "BROWSER=none DATABASE_NAME=seed_browser node ./buildSrc/runBrowserTests.js",
+		"server:dropDatabase": "cd server && yarn dropDatabase",
+		"tslint:ui": "tslint -p ./ui/tsconfig.json",
+		"tslint:server": "tslint -p ./server/tsconfig.json",
+		"tslint:serviceTests": "tslint -p ./service-tests/tsconfig.json",
+		"tslint:browserTests": "tslint -p ./browser-tests/tsconfig.json",
+		"install": "run-p install:*",
+		"start": "run-p start:ui start:serverDev",
+		"test": "run-s test:*",
+		"tslint": "run-p tslint:*"
+	},
+	"devDependencies": {
+		"axios": "0.16.2",
+		"concurrently": "3.5.0",
+		"npm-run-all": "^4.1.0",
+		"tree-kill": "1.1.0",
+		"tslint": "5.5.0",
+		"tslint-loader": "3.5.3",
+		"tslint-no-circular-imports": "0.1.0",
+		"tslint-react": "3.1.0",
+		"yarn": "0.27.5"
+	}
+}

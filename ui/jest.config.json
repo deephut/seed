@@ -1,0 +1,37 @@
+{
+	"collectCoverageFrom": [
+		"src/**/*.{ts,tsx}"
+	],
+	"coveragePathIgnorePatterns": [
+		"[/\\\\]src[/\\\\].+\\.d.ts$"
+	],
+	"setupFiles": [
+		"<rootDir>/config/polyfills.js"
+	],
+	"testPathIgnorePatterns": [
+		"<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
+	],
+	"testEnvironment": "node",
+	"testURL": "http://localhost",
+	"transform": {
+		"^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+		"^.+\\.(ts|tsx)?$": "<rootDir>/config/jest/typescriptTransform.js",
+		"^(?!.*\\.(css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+	},
+	"transformIgnorePatterns": [
+		"[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+	],
+	"moduleNameMapper": {
+		"^react-native$": "react-native-web",
+		"^.+\\.scss$": "identity-obj-proxy"
+	},
+	"moduleFileExtensions": [
+		"ts",
+		"tsx",
+		"js"
+	],
+	"testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+	"modulePaths": ["<rootDir>/src"],
+	"coverageDirectory": "./build/jest/coverage",
+	"cacheDirectory": "./build/jest/cache"
+}
