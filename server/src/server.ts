@@ -17,7 +17,7 @@ const runServer = () => {
 	/**
 	 * Configure server.
 	 */
-	app.set('port', process.env.SERVER_PORT)
+	app.set('port', config.serverPort)
 		.use(compression())
 		.use(bodyParser.json())
 		.use(bodyParser.urlencoded({extended: true}))

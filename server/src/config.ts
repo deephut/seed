@@ -12,11 +12,13 @@ const getBoolean = (name: string): boolean => getString(name) === 'true';
 
 interface ServerConfig {
 	isProduction: boolean;
+	serverPort: string;
 	database: Config
 }
 
 export const config: ServerConfig = {
 	isProduction: process.env.NODE_ENV === 'production',
+	serverPort: process.env.SERVER_PORT,
 	database: {
 		client: 'pg',
 		acquireConnectionTimeout: getNumber('DATABASE_ACQUIRE_CONNECTION_TIMEOUT'),
