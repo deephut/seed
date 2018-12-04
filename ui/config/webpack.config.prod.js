@@ -66,6 +66,7 @@ module.exports = {
 		publicPath: publicPath
 	},
 	resolve: {
+		modules: [paths.appSrc, 'node_modules'],
 		extensions: ['.ts', '.tsx', '.js', '.json', '.jsx']
 	},
 	module: {
@@ -96,12 +97,7 @@ module.exports = {
 			{
 				test: /\.(ts|tsx)$/,
 				include: paths.appSrc,
-				enforce: 'pre',
-				loader: 'tslint-loader'
-			},
-			{
-				test: /\.(ts|tsx)$/,
-				include: paths.appSrc,
+				exclude: [/node_modules/],
 				loader: 'ts-loader'
 			},
 			{
