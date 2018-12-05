@@ -10,7 +10,7 @@ Promise.all([
 ])
 	.then(
 		() => {
-			runYarnCommand('start:BrowserTests').on('exit', code => {
+			runYarnCommand('start:browserTests').on('exit', code => {
 				process.exitCode = code; // success of this script depends on the success of the tests
 				kill(client);
 				kill(server);
